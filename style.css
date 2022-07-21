@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --font-family-heading: 'Staatliches', cursive;
+    --font-family-text: 'Palanquin', sans-serif;
+
+    --background-color-body: #EFF1FF;
+    --background-color-header: #8E9AAF
+}
+
+header {
+    background: var(--background-color-header);
+    width: 38.4rem;
+    margin: 0 auto;
+
+    height: 31rem;
+
+    padding-bottom: 3rem;
+}
+
+header img {
+    display: flex;
+    margin: 0 auto;
+    padding: 3.2rem 0 0;
+    margin-bottom: 3.2rem;
+}
+
+header h1 {
+    font-size: 4.0rem;
+    font-family: var(--font-family-heading);
+    line-height: 3.4rem;
+
+    background: hsla(275, 18%, 79%, 1);
+
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+    text-align: center;
+
+}
+
+.page {
+    width: 38.4rem;
+    margin: 0 auto;
+    
+    background: var(--background-color-body);
+}
+
+.lorem {
+    font-family: var(--font-family-text);
+    font-size: 2.0rem;
+    line-height: 1.5rem;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #23053A;
+
+    padding-top: 1.4rem;
+
+    margin-bottom: 6.3rem;
+
+}
+
+.content {
+    padding: 1.4rem 3.2rem 0;
+}
+
+.tiny-card {
+    position: relative;
+
+    font-family: var(--font-family-heading);
+}
+
+.tiny-card img {
+    width: 32rem;
+    height: 25rem;
+
+    object-fit: cover;
+    border-radius: 2rem;
+}
+
