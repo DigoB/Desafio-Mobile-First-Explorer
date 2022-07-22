@@ -10,8 +10,12 @@
     --font-family-heading: 'Staatliches', cursive;
     --font-family-text: 'Palanquin', sans-serif;
 
+    --font-color-card: hsla(232, 17%, 35%, 1);
+
     --background-color-body: #EFF1FF;
-    --background-color-header: #8E9AAF
+    --background-color-header: #8E9AAF;
+    --background-color-card: #FEEAFA;
+
 }
 
 header {
@@ -47,10 +51,12 @@ header h1 {
 }
 
 .page {
-    width: 38.4rem;
+    max-width: 38.4rem;
     margin: 0 auto;
     
     background: var(--background-color-body);
+
+    padding: 1.4rem 3.2rem 6rem;
 }
 
 .lorem {
@@ -70,17 +76,17 @@ header h1 {
 
 }
 
-.content {
-    padding: 1.4rem 3.2rem 0;
-}
-
-.tiny-card {
+.small-card {
     position: relative;
 
     font-family: var(--font-family-heading);
+
+    margin-bottom: 3.6rem;
+
+    animation: downtop 700ms;
 }
 
-.tiny-card img {
+.small-card img {
     width: 32rem;
     height: 25rem;
 
@@ -88,3 +94,98 @@ header h1 {
     border-radius: 2rem;
 }
 
+.small-card h2 {
+    position: absolute;
+    top: 1.6rem;
+    right: 1.6rem;
+
+    width: 11.2rem;
+    height: 3.5rem;
+
+    font-weight: 400;
+    font-size: 2rem;
+    font-family: var(--font-family-heading);
+    letter-spacing: 0.05em;
+
+    padding-top: 4px;
+    text-align: center;
+    color: var(--font-color-card);
+
+
+    background: var(--background-color-card);
+    border-radius: 2rem;
+
+    animation: topdown 700ms 350ms backwards;
+
+}
+
+.card {
+    position: relative;
+
+    font-family: var(--font-family-heading);
+
+    margin-bottom: 3.6rem;
+
+    animation: downtop 700ms;
+}
+
+.card h2 {
+    position: absolute;
+    top: 1.6rem;
+    right: 1.6rem;
+
+    width: 11.2rem;
+    height: 3.5rem;
+
+    font-weight: 400;
+    font-size: 2rem;
+    font-family: var(--font-family-heading);
+    letter-spacing: 0.05em;
+
+    padding-top: 4px;
+    text-align: center;
+    color: var(--font-color-card);
+
+
+    background: var(--background-color-card);
+    border-radius: 2rem;
+
+    animation: topdown 700ms 350ms backwards;
+
+}
+
+img {
+    transition: all 200ms;
+}
+
+img:hover {
+    transform: scale(1.03);
+    opacity: 0.9;
+}
+
+@keyframes downtop {
+
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes topdown {
+
+    0% {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
